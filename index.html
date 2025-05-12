@@ -15,7 +15,7 @@
     }
 
     header {
-      background-color: #007BFF;
+      background-color: #FF5E5B; /* Bold red for urgency */
       color: white;
       padding: 50px 0;
       text-align: center;
@@ -54,67 +54,116 @@
     }
 
     a {
-      color: #007BFF;
+      color: white;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
     }
+
+    .cta-button {
+      background-color: #FF5E5B; /* Vibrant red for CTA */
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .cta-button:hover {
+      background-color: #FF3B3A; /* Darker red on hover */
+    }
+
+    .course-card h3 {
+      color: #FF5E5B; /* Red for headers */
+    }
+
+    .course-card p {
+      color: #555;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      color: #777;
+    }
+
+    .testimonial-card strong {
+      color: #333;
+    }
+
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Welcome to Retail Expert Courses</h1>
-  <pock Your Potential with Expert Retail Sales Training</p>
+  <h1>Unlock Your Retail Sales Potential!</h1>
+  <p>Join our exclusive courses today and learn strategies that will boost your sales!</p>
 </header>
 
 <div class="container">
-<section class="courses" style="padding: 40px; background-color: #f9f9f9;">
-  <h2 style="text-align: center; margin-bottom: 30px;">Our Courses</h2>
+  <section class="courses" style="padding: 40px; background-color: #f9f9f9;">
+    <h2 style="text-align: center; margin-bottom: 30px; color: #FF5E5B;">Our Premium Courses</h2>
 
-  <div style="display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: auto;">
-    
-    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <h3>Mastering Retail Sales Techniques</h3>
-      <p>Boost your conversion rates and enhance customer satisfaction with advanced sales strategies.</p>
-      <a href="sales-course.html" style="color: white; background-color: #007BFF; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block;">Learn More & Register</a>
-    </div>
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+      <!-- Course 1 -->
+      <div class="course-card">
+        <h3>Mastering Retail Sales Techniques</h3>
+        <p>Boost your conversion rates and enhance customer satisfaction with proven sales strategies.</p>
+        <a href="sales-course.html" class="cta-button">Learn More & Register</a>
+      </div>
 
-    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <h3>Customer Profiling Masterclass</h3>
-      <p>Understand your customers on a deeper level to tailor your approach and increase loyalty.</p>
-      <a href="course-2-register.html" style="color: white; background-color: #007BFF; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block;">Learn More & Register</a>
-    </div>
+      <!-- Course 2 -->
+      <div class="course-card">
+        <h3>Customer Profiling Masterclass</h3>
+        <p>Learn to identify and understand customer types to tailor your sales approach for increased loyalty.</p>
+        <a href="course-2-register.html" class="cta-button">Unlock Customer Insights</a>
+      </div>
 
-    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <h3>Data-Driven Retail Decisions</h3>
-      <p>Make smarter choices using retail analytics and real-time insights.</p>
-      <a href="course-3-register.html" style="color: white; background-color: #007BFF; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block;">Learn More & Register</a>
+      <!-- Course 3 -->
+      <div class="course-card">
+        <h3>Data-Driven Retail Decisions</h3>
+        <p>Make smarter, data-driven decisions that will elevate your sales and business outcomes.</p>
+        <a href="course-3-register.html" class="cta-button">Join Now & Learn More</a>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <section class="testimonials">
+    <h2 style="text-align: center; margin-bottom: 30px; color: #FF5E5B;">What Our Students Are Saying</h2>
+    <div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
 
+      <div class="testimonial-card">
+        <p>"This course changed the way I approach sales. The techniques are practical and effective!"</p>
+        <strong>- John D.</strong>
+      </div>
 
-="testimonials">
-  <h2 style="text-align: center;">What Our Students Say</h2>
-  <div style="display: flex; justify-content: space-around; margin-top: 30px;">
-    <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 30%;">
-      <p>"This course changed the way I approach sales. The techniques are practical and effective!"</p>
-      <strong>- John D.</strong>
+      <div class="testimonial-card">
+        <p>"The customer profiling module helped me better understand my clients, leading to higher retention rates."</p>
+        <strong>- Sarah W.</strong>
+      </div>
+
+      <div class="testimonial-card">
+        <p>"Learning how to analyze data in retail made a huge difference in my decision-making process."</p>
+        <strong>- Michael L.</strong>
+      </div>
+
     </div>
-    <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 30%;">
-      <p>"The customer profiling module helped me better understand my clients, leading to higher retention rates."</p>
-      <strong>- Sarah W.</strong>
-    </div>
-    <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 30%;">
-      <p>"Learning how to analyze data in retail made a huge difference in my decision-making process."</p>
-      <strong>- Michael L.</strong>
-    </div>
-  </div>
-</section>
+  </section>
+</div>
 
 <footer>
   <p>Contact Us: <a href="mailto:pmakapela2018@gmail.com">pmakapela2018@gmail.com</a> | Phone: 0748315232</p>
