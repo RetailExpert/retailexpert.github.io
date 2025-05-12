@@ -14,97 +14,105 @@
       color: #333;
     }
 
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 50px 0;
+      text-align: center;
+    }
+
     .container {
-      max-width: 900px;
+      max-width: 1200px;
       margin: auto;
       padding: 40px 20px;
       background: #fff;
       margin-top: 40px;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    h1, h2 {
-      color: #1e1e2f;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 20px;
-      background-color: #eef1f5;
+    .course-card {
+      background: #fff;
       padding: 20px;
       border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      margin-bottom: 30px;
     }
 
-    a.course-link {
-      text-decoration: none;
-      color: #007BFF;
-      font-weight: bold;
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .price {
-      color: #444;
+    .testimonials {
+      margin-top: 50px;
+      background-color: #f8f8f8;
+      padding: 40px 0;
     }
 
     footer {
+      background-color: #333;
+      color: white;
+      padding: 30px 0;
       text-align: center;
-      margin-top: 40px;
-      color: #aaa;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to Retail Expert Courses</h1>
-    <p>Choose from our specialized retail training programs to boost your career and performance.</p>
 
-    <h2>Courses</h2>
-    <ul>
-      <li>
-        <a href="sales-course.html" class="course-link">Mastering Retail Sales Techniques</a>
+<header>
+  <h1>Welcome to Retail Expert Courses</h1>
+  <p>Unlock Your Potential with Expert Retail Sales Training</p>
+</header>
 
-        <span class="price">Price: $35</span>
-      </li>
-      <li>
-        <a href="course-2-register.html" class="course-link">Customer Profiling Masterclass</a>
-        <span class="price">Price: $40</span>
-      </li>
-      <li>
-        <a href="course-3-register.html" class="course-link">Data-Driven Retail Decisions</a>
-        <span class="price">Price: $40</span>
-      </li>
-    </ul>
-    <!-- Testimonials -->
-    <div style="background: #f9f9f9; padding: 30px 20px; border-radius: 10px; margin-top: 40px;">
-      <h2 style="text-align: center; color: #1e1e2f;">What Our Students Say</h2>
-
-      <div style="margin-top: 20px;">
-        <p style="font-style: italic;">"This course helped me close more sales in just two weeks. Highly recommend!"</p>
-        <p><strong>- Nomsa D.</strong>, Cape Town</p>
-      </div>
-
-      <div style="margin-top: 20px;">
-        <p style="font-style: italic;">"Understanding customer behavior changed how I talk to clients. It's a game changer."</p>
-        <p><strong>- Thabo M.</strong>, Johannesburg</p>
-      </div>
-
-      <div style="margin-top: 20px;">
-        <p style="font-style: italic;">"I now use data insights every week to improve team performance. Very practical!"</p>
-        <p><strong>- Lerato K.</strong>, Durban</p>
-      </div>
-    
-
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:pmakapela2018@gmail.com">pmakapela2018@gmail.com</a></p>
-    <p>Phone: 0748315232</p>
+<div class="container">
+  <h2>Our Courses</h2>
+  <div style="display: flex; justify-content: space-around; margin-top: 40px;">
+    <div class="course-card">
+      <h3>Mastering Retail Sales Techniques</h3>
+      <p>Learn advanced techniques to close sales and boost your conversion rates.</p>
+      <a href="sale.html" style="display: inline-block; padding: 12px 24px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 6px;">Learn More</a>
+    </div>
+    <div class="course-card">
+      <h3>Customer Profiling Masterclass</h3>
+      <p>Understand your customers on a deeper level to tailor your approach and increase loyalty.</p>
+      <a href="customer-profiling.html" style="display: inline-block; padding: 12px 24px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 6px;">Learn More</a>
+    </div>
+    <div class="course-card">
+      <h3>Data-Driven Retail Decisions</h3>
+      <p>Make smarter choices using retail analytics and real-time insights.</p>
+      <a href="data-driven.html" style="display: inline-block; padding: 12px 24px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 6px;">Learn More</a>
+    </div>
   </div>
+</div>
 
-  <footer>&copy; 2025 Retail Expert</footer>
+<section class="testimonials">
+  <h2 style="text-align: center;">What Our Students Say</h2>
+  <div style="display: flex; justify-content: space-around; margin-top: 30px;">
+    <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 30%;">
+      <p>"This course changed the way I approach sales. The techniques are practical and effective!"</p>
+      <strong>- John D.</strong>
+    </div>
+    <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 30%;">
+      <p>"The customer profiling module helped me better understand my clients, leading to higher retention rates."</p>
+      <strong>- Sarah W.</strong>
+    </div>
+    <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 30%;">
+      <p>"Learning how to analyze data in retail made a huge difference in my decision-making process."</p>
+      <strong>- Michael L.</strong>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Contact Us: <a href="mailto:pmakapela2018@gmail.com">pmakapela2018@gmail.com</a> | Phone: 0748315232</p>
+  <p>&copy; 2025 Retail Expert. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
