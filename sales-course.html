@@ -50,15 +50,73 @@
 </head>
 <body>
   <div class="container">
-    <h1>Mastering Retail Sales Techniques</h1>
-    <p>Unlock powerful strategies to boost your conversion rates and enhance customer satisfaction.</p>
+    <!-- Lesson 1 Content -->
+<div class="container">
+  <h2>Lesson 1: Understanding Retail Sales Techniques</h2>
+  <p>In this lesson, we'll dive into essential retail sales techniques that will help you maximize your sales conversions and customer satisfaction.</p>
 
-    <h3>What You'll Learn:</h3>
-    <ul>
-      <li>Advanced sales tactics</li>
-      <li>Closing techniques</li>
-      <li>Handling objections with confidence</li>
-      <li>Building long-term customer relationships</li>
+  <h3>Key Concepts</h3>
+  <ul>
+    <li>Active Listening</li>
+    <li>Effective Questioning</li>
+    <li>Building Trust</li>
+    <li>Handling Objections</li>
+  </ul>
+
+  <h3>Activity: Active Listening Roleplay</h3>
+  <p>For this activity, pair up with a colleague or practice by yourself. Take turns being the customer and the salesperson. Use active listening to guide the conversation. Reflect on how your listening skills impact the conversation.</p>
+  
+  <h3>Quiz</h3>
+  <p>Take the quiz below to test your understanding of the techniques learned in this lesson.</p>
+  
+  <!-- Quiz Code -->
+  <form id="quizForm">
+    <p>1. What is the first step in building rapport with a customer?</p>
+    <label><input type="radio" name="q1" value="a"> Active Listening</label><br>
+    <label><input type="radio" name="q1" value="b"> Asking for their phone number</label><br>
+    <label><input type="radio" name="q1" value="c"> Talking about discounts</label><br><br>
+    
+    <p>2. How should you handle a customer objection?</p>
+    <label><input type="radio" name="q2" value="a"> Ignore it and continue the sale</label><br>
+    <label><input type="radio" name="q2" value="b"> Listen carefully and provide a solution</label><br>
+    <label><input type="radio" name="q2" value="c"> Argue with the customer to convince them</label><br><br>
+
+    <button type="button" onclick="checkAnswers()">Submit Answers</button>
+  </form>
+
+  <p id="quizResult"></p>
+  
+  <script>
+    function checkAnswers() {
+      var score = 0;
+      var totalQuestions = 2;
+      
+      // Check Question 1
+      if (document.querySelector('input[name="q1"]:checked')?.value == 'a') {
+        score++;
+      }
+
+      // Check Question 2
+      if (document.querySelector('input[name="q2"]:checked')?.value == 'b') {
+        score++;
+      }
+
+      var resultText = "You scored " + score + " out of " + totalQuestions + ".";
+      if (score < 2) {
+        resultText += " Unfortunately, you did not pass the quiz. Please review the lesson.";
+      } else {
+        resultText += " Congratulations! You've passed the quiz.";
+      }
+
+      document.getElementById('quizResult').textContent = resultText;
+    }
+  </script>
+</div>
+
+<!-- End of Lesson 1 Content -->
+
+<footer>&copy; 2025 Retail Expert</footer>
+
     </ul>
 <p>
   
