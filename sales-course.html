@@ -24,7 +24,7 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    h1 {
+    h1, h2, h3 {
       color: #1e1e2f;
     }
 
@@ -46,99 +46,101 @@
       margin-top: 40px;
       color: #aaa;
     }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #quizResult {
+      margin-top: 20px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Lesson 1 Content -->
-<div class="container">
-  <h2>Lesson 1: Understanding Retail Sales Techniques</h2>
-  <p>In this lesson, we'll dive into essential retail sales techniques that will help you maximize your sales conversions and customer satisfaction.</p>
+    <h1>Mastering Retail Sales Techniques</h1>
 
-  <h3>Key Concepts</h3>
-  <ul>
-    <li>Active Listening</li>
-    <li>Effective Questioning</li>
-    <li>Building Trust</li>
-    <li>Handling Objections</li>
-  </ul>
+    <!-- LESSON 1 -->
+    <h2>Lesson 1: Understanding Retail Sales Techniques</h2>
+    <p>In this lesson, we'll dive into essential retail sales techniques that will help you maximize your sales conversions and customer satisfaction.</p>
 
-  <h3>Activity: Active Listening Roleplay</h3>
-  <p>For this activity, pair up with a colleague or practice by yourself. Take turns being the customer and the salesperson. Use active listening to guide the conversation. Reflect on how your listening skills impact the conversation.</p>
-  
-  <h3>Quiz</h3>
-  <p>Take the quiz below to test your understanding of the techniques learned in this lesson.</p>
-  
-  <!-- Quiz Code -->
-  <form id="quizForm">
-    <p>1. What is the first step in building rapport with a customer?</p>
-    <label><input type="radio" name="q1" value="a"> Active Listening</label><br>
-    <label><input type="radio" name="q1" value="b"> Asking for their phone number</label><br>
-    <label><input type="radio" name="q1" value="c"> Talking about discounts</label><br><br>
-    
-    <p>2. How should you handle a customer objection?</p>
-    <label><input type="radio" name="q2" value="a"> Ignore it and continue the sale</label><br>
-    <label><input type="radio" name="q2" value="b"> Listen carefully and provide a solution</label><br>
-    <label><input type="radio" name="q2" value="c"> Argue with the customer to convince them</label><br><br>
-
-    <button type="button" onclick="checkAnswers()">Submit Answers</button>
-  </form>
-
-  <p id="quizResult"></p>
-  
-  <script>
-    function checkAnswers() {
-      var score = 0;
-      var totalQuestions = 2;
-      
-      // Check Question 1
-      if (document.querySelector('input[name="q1"]:checked')?.value == 'a') {
-        score++;
-      }
-
-      // Check Question 2
-      if (document.querySelector('input[name="q2"]:checked')?.value == 'b') {
-        score++;
-      }
-
-      var resultText = "You scored " + score + " out of " + totalQuestions + ".";
-      if (score < 2) {
-        resultText += " Unfortunately, you did not pass the quiz. Please review the lesson.";
-      } else {
-        resultText += " Congratulations! You've passed the quiz.";
-      }
-
-      document.getElementById('quizResult').textContent = resultText;
-    }
-  </script>
-</div>
-
-<!-- End of Lesson 1 Content -->
-
-<footer>&copy; 2025 Retail Expert</footer>
-
+    <h3>Key Concepts</h3>
+    <ul>
+      <li>Active Listening</li>
+      <li>Effective Questioning</li>
+      <li>Building Trust</li>
+      <li>Handling Objections</li>
     </ul>
-<p>
-  
 
-<p>Click below to register for the "Mastering Retail Sales Techniques" course. In your email, please include:</p>
-<ul>
-  <li>Your full name</li>
-  <li>Phone number</li>
-  <li>Preferred course start date</li>
-</ul>
+    <h3>Activity: Active Listening Roleplay</h3>
+    <p>Pair up with a colleague or practice solo. Take turns playing customer and salesperson. Use active listening and note how it affects your conversation.</p>
 
-<p><strong>Price: $35</strong></p>
+    <h3>Quiz</h3>
+    <p>Take this quick quiz to test your knowledge.</p>
+    <form id="quizForm">
+      <p>1. What is the first step in building rapport with a customer?</p>
+      <label><input type="radio" name="q1" value="a"> Active Listening</label><br>
+      <label><input type="radio" name="q1" value="b"> Asking for their phone number</label><br>
+      <label><input type="radio" name="q1" value="c"> Talking about discounts</label><br><br>
+      
+      <p>2. How should you handle a customer objection?</p>
+      <label><input type="radio" name="q2" value="a"> Ignore it and continue the sale</label><br>
+      <label><input type="radio" name="q2" value="b"> Listen carefully and provide a solution</label><br>
+      <label><input type="radio" name="q2" value="c"> Argue with the customer to convince them</label><br><br>
 
-<p>
-  <a href="mailto:pmakapela2018@gmail.com?subject=Course Registration: Retail Sales Techniques" style="display: inline-block; padding: 12px 24px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
-    Register Now
-  </a>
-</p>
+      <button type="button" onclick="checkAnswers()">Submit Answers</button>
+    </form>
 
-<p><strong>Payment Instructions:</strong><br>
-After registering, you will receive payment details via email. You can pay via bank transfer or PayPal.
-</p>
+    <p id="quizResult"></p>
+
+    <script>
+      function checkAnswers() {
+        let score = 0;
+        let total = 2;
+        if (document.querySelector('input[name="q1"]:checked')?.value === 'a') score++;
+        if (document.querySelector('input[name="q2"]:checked')?.value === 'b') score++;
+
+        let message = "You scored " + score + " out of " + total + ". ";
+        message += score === total 
+          ? "Congratulations! You've passed the quiz." 
+          : "Unfortunately, you did not pass. Please review the lesson and try again.";
+
+        document.getElementById("quizResult").textContent = message;
+      }
+    </script>
+
+    <hr>
+
+    <h2>Register for This Course</h2>
+    <p>Click below to register for the "Mastering Retail Sales Techniques" course. In your email, please include:</p>
+    <ul>
+      <li>Your full name</li>
+      <li>Phone number</li>
+      <li>Preferred course start date</li>
+    </ul>
+
+    <p><strong>Price: $35</strong></p>
+
+    <p>
+      <a href="mailto:pmakapela2018@gmail.com?subject=Course Registration: Retail Sales Techniques" style="display: inline-block; padding: 12px 24px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
+        Register Now
+      </a>
+    </p>
+
+    <p><strong>Payment Instructions:</strong><br>
+    After registering, you will receive payment details via email. You can pay via bank transfer or PayPal.
+    </p>
 
     <p><a href="index.html">← Back to Home</a></p>
   </div>
